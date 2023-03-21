@@ -1318,9 +1318,9 @@
     "@sinonjs/commons" "^2.0.0"
 
 "@tickets-ek/common@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@tickets-ek/common/-/common-1.0.5.tgz#7b0059e44f87ba8144d9dc9db00924c390c4e54d"
-  integrity sha512-xuE8Clkk/mCt07k3FhqI6dtg7DsfaKrukaQDIgqeK8MBfRKCvy/1kxBl5MVbWQrH8hKnClA4lUijVIyTT6tEaA==
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@tickets-ek/common/-/common-1.0.6.tgz#e6e2586076533384fcd07424c977ea9ddc8ffd23"
+  integrity sha512-RqMY+kmi24pXUzHRdwQ6XKWcxIxHv9/uAmkQDTHZoCyDwQD3KvhkSEeD7nsFr7q5wjKqUUKukV3RWFGewoE1GQ==
   dependencies:
     "@types/cookie-session" "^2.0.44"
     "@types/express" "^4.17.17"
