@@ -4,7 +4,7 @@
 
 ##
 
-![](https://img.shields.io/github/actions/workflow/status/eliyahukoren/gittix-ticketing/ticket.yml?label=Auth%20Service&logo=logo)
+![](https://img.shields.io/github/actions/workflow/status/eliyahukoren/gittix-ticketing/ticket.yml?label=Ticketing%20Service&logo=logo)
 
 ##
 
