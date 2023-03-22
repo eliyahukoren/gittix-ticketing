@@ -1,20 +1,22 @@
 import request from 'supertest';
 import { app } from '../../app';
 
-const createTicket = async (title: string) => {
+const createTicket = async (title: string, cookie: string[]) => {
   return request(app)
     .post("/api/tickets")
-    .set("Cookie", global.signin())
+    .set("Cookie", cookie)
     .send({
       title,
       price: 20,
     });
 }
 
-it('cat fetch a list of tickets', async () => {
-  createTicket('ticket 1');
-  createTicket("ticket 2");
-  createTicket("ticket 3");
+it('can fetch a list of tickets', async () => {
+  const cookie = global.signin();
+
+  await createTicket('ticket 1', cookie);
+  await createTicket("ticket 2", cookie);
+  await createTicket("ticket 3", cookie);
 
   const response = await request(app)
     .get('/api/tickets')
