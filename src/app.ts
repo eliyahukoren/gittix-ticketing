@@ -5,6 +5,7 @@ import "express-async-errors";
 import { indexTicketRouter } from "./routes";
 import { createTicketRouter } from "./routes/new";
 import { showTicketRouter } from "./routes/show";
+import { updateTicketRouter } from "./routes/update";
 
 import { currentUser, errorHandler, NotFoundError } from "@tickets-ek/common";
 
@@ -26,6 +27,7 @@ app.use(currentUser);
 app.use(createTicketRouter);
 app.use(showTicketRouter);
 app.use(indexTicketRouter);
+app.use(updateTicketRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
