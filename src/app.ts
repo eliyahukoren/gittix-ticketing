@@ -2,6 +2,7 @@ import { json } from "body-parser";
 import cookieSession from "cookie-session";
 import express from "express";
 import "express-async-errors";
+import { indexTicketRouter } from "./routes";
 import { createTicketRouter } from "./routes/new";
 import { showTicketRouter } from "./routes/show";
 
@@ -24,6 +25,7 @@ app.use(currentUser);
 // define routes
 app.use(createTicketRouter);
 app.use(showTicketRouter);
+app.use(indexTicketRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
