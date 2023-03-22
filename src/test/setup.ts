@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 
 declare global {
   var signin: () => string[];
+  var generateId: () => string;
 }
 
 let mongo: any;
@@ -32,6 +33,10 @@ afterAll( async () => {
   }
   await mongoose.connection.close();
 });
+
+global.generateId = () => {
+  return new mongoose.Types.ObjectId().toHexString();
+}
 
 global.signin = () => {
   // Build a JWT Payload. { id, email}
